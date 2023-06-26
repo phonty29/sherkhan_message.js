@@ -1,5 +1,3 @@
-'use strict';
-
 const defineSherkhanMessage = (object) => {
 	try {
 		Object.defineProperty(object, 'sherkhan_message', {
@@ -11,9 +9,8 @@ const defineSherkhanMessage = (object) => {
 	}
 	catch (err) {
 		console.error(err)
-	} finally {
-		return object
 	}
+	return object
 };
 
 module.exports = {

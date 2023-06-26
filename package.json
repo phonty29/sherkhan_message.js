@@ -4,7 +4,8 @@
   "description": "Adds property \"sherkhan_message\" to Object(if it's possible). Interested what the message is? Just check it=)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
     "sherkhan_message"
   ],
   "author": "Amedov Bekmuhamet phonty29 <amedov.bekmuhamet@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-kentcdodds": "^20.5.0"
+  }
 }
