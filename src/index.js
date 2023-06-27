@@ -1,5 +1,1 @@
-const { defineSherkhanMessage } = require('./defineSherkhanMessage')
-
-module.exports = {
-	defineSherkhanMessage,
-}
+export { default as defineSherkhanMessage } from './defineSherkhanMessage' 

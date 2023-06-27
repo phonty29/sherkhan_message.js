@@ -1,4 +1,6 @@
-require('dotenv').config()
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const defineSherkhanMessage = (object) => {
 	try {
@@ -15,6 +17,4 @@ const defineSherkhanMessage = (object) => {
 	return object
 };
 
-module.exports = {
-	defineSherkhanMessage,
-}
+export default defineSherkhanMessage
