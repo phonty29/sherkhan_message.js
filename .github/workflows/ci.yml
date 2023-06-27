@@ -31,3 +31,28 @@ jobs:
 
       - name: Validate and build the package 
         run: npm run validate 
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.6.3 
+
+      - name: Set node version to 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
+
+      - run: pnpm install
+      - run: npm run semantic-release 
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET }}
+
