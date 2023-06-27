@@ -1,5 +1,4 @@
 const defineSherkhanMessage = require('../src/defineSherkhanMessage').default
-require('dotenv').config()
 
 describe('defineSherkhanMessage', () => {
 	it('adds property to object', () => {
@@ -11,6 +10,6 @@ describe('defineSherkhanMessage', () => {
 	it('message content is proper', () => {
 		const obj = {}
 		defineSherkhanMessage(obj)
-		expect(obj.sherkhan_message).toBe(process.env.SHERKHAN_MESSAGE)
+		expect(obj.sherkhan_message).toBe('Э котакбас э блять сука амынды шыгарам мал')
 	})
 })

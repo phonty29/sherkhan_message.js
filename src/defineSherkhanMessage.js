@@ -1,11 +1,7 @@
-import dotenv from 'dotenv'
-
-dotenv.config()
-
 const defineSherkhanMessage = (object) => {
 	try {
 		Object.defineProperty(object, 'sherkhan_message', {
-			value: process.env.SHERKHAN_MESSAGE,
+			value: 'Э котакбас э блять сука амынды шыгарам мал',
 			writable: false,
 			enumerable: true,
 			configurable: false,
