@@ -1,7 +1,6 @@
 const defineSherkhanMessage = require('../src/defineSherkhanMessage').default
 require('dotenv').config()
 
-console.log(defineSherkhanMessage)
 describe('defineSherkhanMessage', () => {
 	it('adds property to object', () => {
 		const obj = {}
