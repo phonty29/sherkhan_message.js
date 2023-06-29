@@ -36,7 +36,7 @@ jobs:
           run: npm run validate
 
         - name: Set package version tag
-          run: npm version v${{ RELEASE_VERSION }}
+          run: npm version v$RELEASE_VERSION
 
         - name: Publish package to NPM
           run: npm publish
