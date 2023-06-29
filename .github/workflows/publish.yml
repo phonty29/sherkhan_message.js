@@ -36,11 +36,8 @@ jobs:
 
       - name: Set package version 
         run: npm version v${{ env.RELEASE_VERSION }}
-        
-      - name: Output package version
-        run: var=$(npm view sherkhan_message version); echo $var
 
       - name: Publish package to NPM
         run: npm publish 
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
