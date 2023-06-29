@@ -1,6 +1,6 @@
 {
   "name": "sherkhan_message",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Adds property \"sherkhan_message\" to Object(if it's possible). Interested what the message is? Just check it=)",
   "main": "index.js",
   "files": [
@@ -13,8 +13,7 @@
     "test": "jest",
     "coverage": "npx jest --coverage",
     "lint": "eslint src",
-    "validate": "npm-run-all --parallel test lint build",
-    "release": "semantic-release pre && npm publish && semantic-release post" 
+    "validate": "npm-run-all --parallel test lint build"
   },
   "repository": {
     "type": "git",
