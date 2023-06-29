@@ -24,6 +24,11 @@ jobs:
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Git configuration
+        run: |
+          git config --global user.email "amedov.bekmuhamet@gmail.com"
+          git config --global user.name "phonty29"
+          
       - run: pnpm install
 
       - name: Validate and build the package 
